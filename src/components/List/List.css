@@ -1,0 +1,25 @@
+.list-container {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.list-item {
+  border: 1px solid grey;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  column-gap: 30px;
+}
+
+.detail {
+  border: 1px solid grey;
+  padding: 5px;
+}
+
+.name {
+  padding: 7px 5px 10px;
+}
