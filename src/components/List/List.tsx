@@ -4,15 +4,15 @@ import { fetchApi } from "../../fetchApi";
 import { Details } from "../Details/Details";
 
 type TypeLoadData = {
-  id: number;
+  id: number | null;
   name: string;
 };
 
 export const List = () => {
   const [loading, setLoading] = useState(false);
   const [showComponent, setShowComponent] = useState(false);
-  const [componentInfo, setComponentInfo] = useState({
-    id: NaN,
+  const [componentInfo, setComponentInfo] = useState<TypeLoadData>({
+    id: null,
     name: "",
   });
   const [data, setData] = useState<TypeLoadData[]>([]);
@@ -33,7 +33,7 @@ export const List = () => {
     }
   }, [loading]);
 
-  const handleClick = (id: number, name: string) => {
+  const handleClick = (id: number | null, name: string) => {
     setShowComponent(true);
     const info = { id, name };
 

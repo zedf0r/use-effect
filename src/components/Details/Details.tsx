@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchApi } from "../../fetchApi";
 
 type TypeDetailsProps = {
-  id: number;
+  id: number | null;
   name: string;
 };
 
